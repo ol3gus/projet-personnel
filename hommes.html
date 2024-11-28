@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hommes.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <title>Hommes - DarinShop</title>
+    <style>
+        body {
+            font-family: 'Afacad Flux', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        #header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
+        #navbar {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        #navbar i {
+            margin-right: 10px;
+        }
+
+        .nav-button {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-button:hover {
+            color: #007bff;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        .bande-passante {
+            height: 10px;
+            background-color: #007bff;
+            width: 100%;
+        }
+
+        .produit {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 15px;
+            text-align: center;
+            width: 200px;
+            transition: transform 0.3s;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .add-to-cart, .add-to-favorites {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .add-to-cart:hover, .add-to-favorites:hover {
+            background-color: #0056b3;
+        }
+
+        .add-to-favorites {
+            background-color: #dc3545;
+        }
+
+        .add-to-favorites:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+    <section id="header">
+        <a href="#"><img src="img/logo (2).png" class="logo" alt="Logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                <li><a href="index.html" class="nav-button">Accueil</a></li>
+                <li><a href="hommes.html" class="nav-button">Hommes</a></li>
+                <li><a href="femmes.html" class="nav-button">Femmes</a></li>
+                <li><a href="panier.html" class="nav-button"><i class="fa-solid fa-basket-shopping"></i> Panier</a></li>
+                <li><a href="favoris.html" class="nav-button"><i class="fa-solid fa-heart"></i> Favoris</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="bande-passante"></div>
+    <h1>Nouveautés !</h1>
+
+    <div class="produit">
+        <div id="Niketech" class="card">
+            <img src="img/Jo4.png" alt="Niketech">
+            <p>Jordan 4 | 89.99$</p>
+            <button class="add-to-cart">Ajouter au panier</button>
+            <button class="add-to-favorites" onclick="toggleFavorite('Niketech', 'Jordan 4', 89.99, 'img/Jo4.png')">
+                <i class="fa-solid fa-heart"></i> Favoris
+            </button>
+        </div>
+        <div id="Nike" class="card">
+            <img src="img/AF-removebg-preview.png" alt="Produit Nike">
+            <p>Air Force 1 white | 119.99$</p>
+            <button class="add-to-cart">Ajouter au panier</button>
+            <button class="add-to-favorites" onclick="toggleFavorite('Nike', 'Air Force 1 white', 119.99, 'img/AF-removebg-preview.png')">
+                <i class="fa-solid fa-heart"></i> Favoris
+            </button>
+        </div>
+        <div id="AF" class="card">
+            <img src="img/AirNoir.png" alt="Produit Adidas">
+            <p>Air Force 1 Noir | 49.99$</p>
+            <button class="add-to-cart">Ajouter au panier</button>
+            <button class="add-to-favorites" onclick="toggleFavorite('AF', 'Air Force 1 Noir', 49.99, 'img/AirNoir.png')">
+                <i class="fa-solid fa-heart"></i> Favoris
+            </button>
+        </div>
+        <div id="Jo" class="card">
+            <img src="img/Jordan4-removebg-preview.png" alt="Produit Jordan">
+            <p>Jordan 4 | 140.99$</p>
+            <button class="add-to-cart">Ajouter au panier</button>
+            <button class="add-to-favorites" onclick="toggleFavorite('Jo', 'Jordan 4', 140.99, 'img/Jordan4-removebg-preview.png')">
+                <i class="fa-solid fa-heart"></i> Favoris
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>

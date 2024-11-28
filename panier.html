@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+    <title>Panier - DarinShop</title>
+    <style>
+        body {
+            font-family: 'Afacad Flux', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        #header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
+        #navbar {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .nav-button {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-button:hover {
+            color: #007bff;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        #cart-items {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .cart-item-img {
+            width: 80px;
+            height: auto;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+
+        .cart-item-info {
+            flex: 1;
+        }
+
+        .remove-item {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .remove-item:hover {
+            background-color: #c82333;
+        }
+
+        .cart-total {
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        .checkout-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .checkout-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <section id="header">
+        <a href="#"><img src="img/logo (2).png" class="logo" alt="Logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html" class="nav-button">Accueil</a></li>
+                <li><a href="hommes.html" class="nav-button">Hommes</a></li>
+                <li><a href="femmes.html" class="nav-button">Femmes</a></li>
+                <li><a href="nouveautés.html" class="nav-button">Nouveautés</a></li>
+                <li><a href="marques.html" class="nav-button">Marques</a></li>
+                <li><a href="panier.html" class="nav-button"><i class="fa-solid fa-basket-shopping"></i> Panier</a></li>
+                <li><a href="favoris.html" class="nav-button"><i class="fa-solid fa-heart"></i> Favoris</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <main>
+        <h1>Mon Panier</h1>
+        <div id="cart-items">
+            <div class="cart-item">
+                <img src="img/Jo4.png" alt="Jordan 4" class="cart-item-img">
+                <div class="cart-item-info">
+                    <h2>Jordan 4</h2>
+                    <p>Prix : 89.99€</p>
+                </div>
+                <button class="remove-item">Retirer</button>
+            </div>
+
+            <div class="cart-total">
+                <h2>Total : <span id="total-price">89.99€</span></h2>
+                <button class="checkout-button">Passer à la caisse</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

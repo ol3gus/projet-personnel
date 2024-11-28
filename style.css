@@ -1,0 +1,315 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  background-color: grey;
+
+}
+
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 80px;
+  background: whitesmoke;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+  font-family: 'Afacad Flux';
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  transition: 0.3s ease;
+}
+#navbar li a:hover,
+#navbar li a.active {
+  color: white;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+.main {
+  display: flex;
+  width: max-content;
+  overflow: hidden;
+
+}
+
+#Nike, #Nike1, #Nike2, #Nike3 {
+  margin: 20px auto;
+  display: block;
+  border-radius: 20px;
+  width: 500px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.container {
+    padding: 2rem;
+  animation: fade-down ease 0.7s;
+}
+
+.slider-wrapper {
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 24px;
+    scrollbar-width: none;
+    animation: slide 16s infinite; 
+}
+@keyframes slide{
+  0%{
+      transform: translateX(0);
+  }
+  25%{
+      transform: translateX(0);
+  }
+  30%{
+      transform: translateX(-100%);
+  }
+  50%{
+      transform: translateX(-100%);
+  }
+  55%{
+      transform: translateX(-200%);
+  }
+  75%{
+      transform: translateX(-200%);
+  }
+  80%{
+      transform: translateX(-300%);
+  }
+  100%{
+      transform: translateX(-300%);
+  }
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+    width: 100%;
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+
+
+.slider-nav a:hover {
+    opacity: 1;
+}
+
+
+
+.search-container {
+  display: none;
+  position: absolute;
+  top: 100px; 
+  right: 50px;
+}
+
+.search-bar {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+.show {
+  display: block;
+}
+
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+.modele-homme-femme {
+  display: flex;
+   border-radius: 20px;
+  flex-wrap: wrap;
+
+ 
+
+}
+.modele {
+  display: flex;
+  border-radius: 20px; 
+  padding: 0px; 
+  width: 250px; 
+  margin-top: 100px; 
+  align-items: center;
+  
+
+}
+.modele1 {
+  display: flex;
+  align-items: center;
+  width: 475px;
+  height: auto;
+  margin-top: 20px;
+  position:static ;
+  transition: transform 3.0s ease;
+  border-radius: 10px;
+}
+.modele1:hover {
+  border-color: #000000;
+}
+.decouvrir {
+  justify-content: space-around;
+  background-color: #000000; 
+  color: white; 
+  border: none; 
+  border-radius: 28px; 
+  padding: 15px 25px; 
+  font-size: 23px; 
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+  margin-top: 400px; 
+  margin-left: 175px;
+  position: absolute;
+  font-family: 'Afacad Flux';
+  transition: transform 0.3s ease;
+  align-items: end;
+
+}
+.decouvrir:hover{
+  background-color: #fff;
+  color: #000000;
+  transform: translateY(-15px);
+}
+.decouvrir1 {
+  background-color: #000000; 
+  color: white; 
+  border: none;
+  border-radius: 28px; 
+  padding: 15px 25px; 
+  font-size: 23px; 
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+  margin-top: 750px;
+  margin-left: 650px;
+  align-items: center;
+  position: absolute;
+  font-family: 'Afacad Flux';
+  transition: transform 0.3s ease;
+ 
+}
+.decouvrir1:hover{
+  background-color: #fff;
+  color: #000000;
+  transform: translateY(-15px);
+  
+}
+.decouvrir2 {
+  background-color: #000000; 
+  color: white; 
+  border: none; 
+  border-radius: 28px; 
+  padding: 15px 25px; 
+  font-size: 23px; 
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+  margin-top: 400px; 
+  margin-left: 1125px;
+  align-items: center;
+  position: absolute;
+  font-family: 'Afacad Flux';
+  transition: transform 0.3s ease;
+ 
+  
+}
+.decouvrir2:hover{
+  background-color: #fff;
+  color: #000000;
+  transform: translateY(-15px);
+  
+}
+.oval-image {
+  width: 250px; 
+  height: 150px; 
+  border-radius: 50%; 
+  object-fit: cover;
+  border: 2px solid #333;
+  margin: 0 auto; 
+  display: block; 
+
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.category-button {
+    background-color: #007BFF;
+    color: white; 
+    padding: 15px 30px; 
+    margin: 0 10px; 
+    border: none;
+    border-radius: 5px; 
+    text-decoration: none; 
+    font-size: 16px; 
+    transition: background-color 0.3s; 
+}
+
+.category-button:hover {
+    background-color: #0056b3;
+}
+
+

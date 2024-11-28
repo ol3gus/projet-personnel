@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+    <title>Femmes - DarinShop</title>
+    <style>
+        #message {
+            font-size: 24px;
+            text-align: center;
+            margin-top: 50px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section id="header">
+        <a href="#"><img src="img/logo (2).png" class="logo" alt="Logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html" class="nav-button">Accueil</a></li>
+                <li><a href="hommes.html" class="nav-button">Hommes</a></li>
+                <li><a href="femmes.html" class="nav-button">Femmes</a></li>
+                <li><a href="panier.html" class="nav-button"><i class="fa-solid fa-basket-shopping"></i> Panier</a></li>
+                <li><a href="favoris.html" class="nav-button"><i class="fa-solid fa-heart"></i> Favoris</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="message"></section>
+
+    <script>
+        const messageElement = document.getElementById('message');
+        const message = "Non disponible pour le moment";
+        let index = 0;
+
+        function typeMessage() {
+            if (index < message.length) {
+                messageElement.innerHTML += message.charAt(index);
+                index++;
+                setTimeout(typeMessage, 100);
+            } else {
+                setTimeout(() => {
+                    messageElement.innerHTML = ""; 
+                    index = 0; 
+                    setTimeout(typeMessage, 100); 
+                }, 2000);
+            }
+        }
+
+        typeMessage();
+    </script>
+</body>
+</html>

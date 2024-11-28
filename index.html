@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+    <title>Accueil - DarinShop</title>
+    <style>
+        body {
+            font-family: 'Afacad Flux', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        #header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
+        #navbar {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .nav-button {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-button:hover {
+            color: #007bff;
+        }
+
+        #hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(to bottom right, #007bff, #6a5acd);
+            color: white;
+        }
+
+        #categories {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .button-container {
+            display: inline-flex;
+            gap: 20px;
+        }
+
+        .category-button {
+            background-color: #fff;
+            border: 2px solid #007bff;
+            border-radius: 30px;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .category-button:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        #produits-populaires {
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .product-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .product {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 15px;
+            width: 200px;
+        }
+
+        .oval-image {
+            width: 100%;
+            border-radius: 50%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .add-to-cart {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .add-to-cart:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <section id="header">
+        <a href="#"><img src="img/logo (2).png" class="logo" alt="Logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html" class="nav-button">Accueil</a></li>
+                <li><a href="hommes.html" class="nav-button">Hommes</a></li>
+                <li><a href="femmes.html" class="nav-button">Femmes</a></li>
+                <li><a href="panier.html" class="nav-button"><i class="fa-solid fa-basket-shopping"></i> Panier</a></li>
+                <li><a href="favoris.html" class="nav-button"><i class="fa-solid fa-heart"></i> Favoris</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="hero">
+        <h1>Bienvenue sur Notre Boutique</h1>
+        <p>Découvrez les dernières tendances et styles pour tous !</p>
+    </section>
+
+    <section id="categories">
+        <div class="button-container">
+            <a href="hommes.html" class="category-button">Hommes</a>
+            <a href="femmes.html" class="category-button">Femmes</a>
+        </div>
+    </section>
+
+    <section id="produits-populaires">
+        <h2>Produits Populaires</h2>
+        <div class="product-container">
+            <div class="product">
+                <img src="img/AirNoir.png" alt="Air Force 1 Noir" class="oval-image">
+                <h3>Air Force 1 Noir</h3>
+                <p>Prix : 49.99$</p>
+                <button class="add-to-cart">Ajouter au Panier</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
